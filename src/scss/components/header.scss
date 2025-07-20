@@ -1,15 +1,15 @@
 .header {
-  background: linear-gradient(180deg, #0f8 0%, #00c96b 100%);
-  padding-top: 10px;
-  padding-bottom: 10px;
+  background: #f0e1d8;
+  padding-top: 0;
+  padding-bottom: 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10;
 
   @include media(desktop) {
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -23,11 +23,18 @@
 
   @include media(desktop) {
     justify-content: start;
-    gap: 86px;
+    gap: 132px;
   }
 }
 
 .header-logo-link {
+}
+
+.header-logo-icon {
+  @include media(desktop) {
+    width: 203px;
+    height: 41px;
+  }
 }
 
 .nav-list {
@@ -37,31 +44,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 33px;
   }
 }
 
+.nav-list-item {
+  padding: 10px 0;
+}
+
 .nav-list-link {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: 'Libre Caslon Text', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
-  color: #1e1e1e;
+  color: #000;
   transition: all 0.3s ease-in-out;
 
   &:hover,
   &.active {
+    border: 1px solid #914b21;
   }
 }
 
 .nav-list-link.active {
+  border: 1px solid #914b21;
 }
 
 .nav-btn {
   background-color: transparent;
-  width: 32px;
-  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include media(desktop) {
     display: none;
