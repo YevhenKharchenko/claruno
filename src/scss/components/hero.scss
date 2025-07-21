@@ -5,64 +5,55 @@
 
 .hero-wrapper {
   padding-top: 88px;
-  padding-bottom: 303px;
+  padding-bottom: 398px;
   max-width: 375px;
   margin: 0 auto;
-  position: relative;
+  background-image: url(../img/hero/hero-waves-mob.png),
+    url(../img/hero/hero-bg-mob.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 49px left 131px, bottom 40px right 0px;
+  background-size: auto, auto;
 
   @include media(desktop) {
-    padding-top: 179.5px;
-    padding-bottom: 141.5px;
+    padding-top: 160px;
+    padding-bottom: 194px;
     max-width: 1440px;
+    background-image: url(../img/hero/hero-waves-desk.png),
+      url(../img/hero/hero-bg-desk.png);
+    background-position: bottom 107px right 304px, bottom 96px right 0px;
   }
 }
 
-.hero-title-img {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px;
+.hero-title {
+  font-family: 'Libre Caslon Display', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #1c1c1c;
+  margin-bottom: 24px;
 
   @include media(desktop) {
-    margin-left: 0;
-    margin-bottom: 48px;
-  }
-}
-
-.hero-subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 16px;
-
-  @include media(desktop) {
-    text-align: left;
-    max-width: 528px;
-    font-size: 32px;
+    font-size: 96px;
+    margin-bottom: 32px;
   }
 }
 
 .hero-text {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-family: 'Libre Caslon Text', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 40px;
+  color: #1c1c1c;
+  margin-bottom: 16px;
 
   @include media(desktop) {
-    text-align: left;
-    max-width: 528px;
-    font-size: 20px;
+    font-size: 32px;
+    margin-bottom: 32px;
+    max-width: 762px;
   }
 }
 
 .hero-btn-wrapper {
   display: flex;
-  justify-content: center;
 
   @include media(desktop) {
     max-width: max-content;
@@ -72,21 +63,18 @@
 }
 
 .hero-btn {
+  background: #f25b54;
+  border-radius: 15px;
+  padding: 16px 32px;
+  font-family: 'Libre Caslon Text', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #f8f8f8;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero-bg-img {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
 
   @include media(desktop) {
-    bottom: 0;
-    right: 0;
-    left: auto;
-    transform: none;
+    font-size: 24px;
   }
 }
